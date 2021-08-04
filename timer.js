@@ -24,17 +24,13 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="root"
-  if(heb === false){
-  document.getElementById("root").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }
-  else{
-    document.getElementById("root").innerHTML = days + "ימים " + hours + "שעות "
-  + minutes + "דקות " + seconds + "שניות ";  
-  }
+
+    document.getElementById("root").innerHTML = days + " ימים " + hours + " שעות "
+  + minutes + " דקות " + seconds + " שניות ";  
+  
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("root").innerHTML = "SHMITA 2021-2022";
+    document.getElementById("root").innerHTML = "שנת שמיטה 2021-2022";
   }
 }, 1000);
